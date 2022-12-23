@@ -13,14 +13,15 @@
     --header-border: #ECECEC;
     --icon-team-color: #AFB1B8;
     --bg-color-icon: background: rgba(255, 255, 255, 0.1);
-    
-
+    --hero-color: #C4C4C4;
 }
 
 body {
 font-family: 'Roboto', sans-serif;
 color: var(--text-title-color);
 }
+
+*{outline: 1px solid goldenrod;}
 
 /* Стили для обнуления верхних отступов у элементов */
 h1,
@@ -154,9 +155,6 @@ text-decoration: none;
 .link-nav:active,
 .link-nav:focus 
 {
-font-weight: 500;
-font-size: 14px;
-line-height: 0.9;
 color: var(--hover-color);
 }
 
@@ -174,11 +172,13 @@ margin-left: auto;
 .link-info-icon
 {
 margin-right: 10px;
+fill: currentColor;
 }
 
 .link-info
 {
-display: block;
+display: flex;
+justify-content: center;
 padding-top: 32px;
 padding-bottom: 32px;
 font-weight: 500;
@@ -187,7 +187,6 @@ line-height: 1.14;
 color: var(--text-articl-color);
 letter-spacing: 0.02em;
 text-decoration: none;
-fill: currentColor;
 }
 
 .link-info:hover, 
@@ -195,7 +194,6 @@ fill: currentColor;
 .link-info:focus 
 {
 color: var(--hover-color);
-fill: currentColor;
 }
 
 /**footer*/
@@ -308,26 +306,27 @@ font-family: 'Roboto';
     align-items: center;
 }
 
-.footer-icon-item {
-    width: 44px;
-    height: 44px;
+.footer-icon-item 
+{
+width: 44px;
+height: 44px;
 
 }
 
 .footer-icon-item:not(:last-child){
-    margin-right: 10px;
+margin-right: 10px;
 }
 
 .footer-icon-link
 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    fill: var(--white-cololr);
-   background-color:  rgba(255, 255, 255, 0.1);
+display: flex;
+align-items: center;
+justify-content: center;
+width: 100%;
+height: 100%;
+border-radius: 50%;
+color: var(--white-cololr);
+background-color:  rgba(255, 255, 255, 0.1);
 }
 
 .footer-icon-link:hover,
@@ -337,6 +336,11 @@ font-family: 'Roboto';
 background-color: var(--hover-color);
 }
 
+.footer-icon-style
+{
+fill: currentColor;
+}
+
 /**Webstudio page*/ 
 /*Hero section*/
 .hero 
@@ -344,7 +348,7 @@ background-color: var(--hover-color);
 padding-top: 200px;
 padding-bottom: 200px;
 text-align: center;
-background-color: var(--footer-color);
+background-color: var(--hero-color);
 list-style-type: none;
 background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero.jpg);
 width: 1600px;
@@ -427,7 +431,6 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-width: 270px;
 height: 120px;
 background-color: var(--team-section-color);
 margin-bottom: 30px;
@@ -569,9 +572,8 @@ letter-spacing: 0.03em;
 
 .team-icon 
 {
-padding-left: 32px;
-padding-right: 32px;
 display: flex;
+justify-content: center;
 }
 
 .team-icon-item:not(:first-child) 
@@ -593,8 +595,7 @@ justify-content: center;
 width: 100%;
 height: 100%;
 border-radius: 50%;
-fill: var(--icon-team-color);
-color: var(--white-cololr);
+color: var(--icon-team-color);
 }
 
 .team-icon-link:hover,
@@ -602,6 +603,11 @@ color: var(--white-cololr);
 .team-icon-link:focus
 {
 background-color: var(--hover-color);
+color: var(--white-cololr);
+}
+
+.team-icon-social
+{
 fill: currentColor;
 }
 
@@ -748,7 +754,6 @@ flex-direction: column;
 .examples-card:focus,
 .examples-card:active
 {
-border: 1px solid #EEEEEE;
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
 0px 4px 4px rgba(0, 0, 0, 0.06),
 1px 4px 6px rgba(0, 0, 0, 0.16);
